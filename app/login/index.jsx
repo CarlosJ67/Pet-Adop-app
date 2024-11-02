@@ -45,7 +45,7 @@ export default function LoginScreen() {
         backgroundColor:Colors.WHITE,
         height:'100%'
     }}>
-        <Image source={require('./../../assets/images/login.png')}
+        <Image source={require('./../../assets/images/Login2.png')}
         style={{
             width:'100%',
             height:500
