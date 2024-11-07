@@ -3,6 +3,7 @@ import React from 'react'
 import Colors from '../../constants/Colors'
 import { useRouter } from 'expo-router'
 import { TouchableOpacity } from 'react-native';
+import MarkFav from '../MarkFav';
 
 export default function PetListItem({pet}) {
   const router= useRouter();
@@ -18,6 +19,14 @@ export default function PetListItem({pet}) {
         backgroundColor:Colors.WHITE,
         borderRadius:10
     }}>
+      <View style={{
+        position:'absolute',
+        zIndex:10,
+        right:10,
+        top:10
+      }}>
+        <MarkFav pet={pet} color={'white'}/>
+      </View>
      <Image source={{uri:pet?.imageUrl}}
      style={{
         width:150,
