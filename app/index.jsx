@@ -16,7 +16,6 @@ export default function Index() {
       <Redirect href={'/(tabs)/home'} />: <Redirect href={'/login'}/>
     }
       
-
     </View>
   );
 }

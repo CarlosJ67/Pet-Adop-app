@@ -23,7 +23,7 @@ export default function Favorite() {
     setLoader(false);
     GetFavPetList(result?.favorites);
   }
-  // buscar lista de mascotas relacionadas
+  // Buscar lista de mascotas relacionadas
   const GetFavPetList=async(favId_)=>{
     setLoader(true);
     setFavPetList([])
@@ -45,7 +45,7 @@ return (
       <Text style={{
         fontFamily:'outfit-medium',
         fontSize:30
-      }}>Favorite</Text>
+      }}>Favoritos</Text>
 
       <FlatList 
       data={favPetList}

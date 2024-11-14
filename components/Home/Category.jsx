@@ -11,7 +11,7 @@ export default function Category({category}) {
         GetCategories();
     }, [])
 
-    // Se utiliza "Get" para obtener la lista de la base de datos de Categorias
+    // Se utiliza "Get" para obtener la lista de la base de datos de la tabla de Categorias
     const GetCategories=async() =>{
         setCategortList([]);
         const snapshot=await getDocs(collection(db,'Category'));

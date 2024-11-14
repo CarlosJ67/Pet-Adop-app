@@ -11,19 +11,21 @@ export default function MarkFav({pet, color='black'}) {
         user&&GetFav();
     },[user])
 
+    // Funcion para obtener todos los favoritos de las publicaciones del usuario.
     const GetFav=async()=>{
      const result = await Shared.GetFavList(user);
      console.log(result);
      setFavList(result?.favorites ? result?.favorites:[])
     }
 
+    // Funcion que genera cuando le da en me gusta a la publucacion y se marca en la card y en la base de datos
     const AddToFav=async()=> {
         const favResult=favList;
         favResult.push(pet?.id)
         await Shared.UpdateFav(user,favResult);
         GetFav();
     }
-
+    // Funcion para remover el me gusta de la publicacion y de se quita del el id de la base de datos
     const removeFromFav=async()=>{
         const favResult=favList.filter(item=>item!=pet.id)
         await Shared.UpdateFav(user,favResult);
