@@ -1,6 +1,6 @@
 import { View, Text, Image, TextInput, StyleSheet, ScrollView, TouchableOpacity, Pressable, ToastAndroid, ActivityIndicator } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { useNavigation } from 'expo-router'
+import { useNavigation, useRouter } from 'expo-router'
 import Colors from '../../constants/Colors';
 import { Picker } from '@react-native-picker/picker';
 import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
@@ -19,7 +19,7 @@ export default function AddNewPet() {
     const [image,setImage]=useState();
     const [loader,setLoader]=useState(false);
     const {user}=useUser();
-
+    const router=useRouter();
     useEffect(()=>{
         navigation.setOptions({
             headerTitle:'Agregar Nueva Mascota'
@@ -100,6 +100,7 @@ export default function AddNewPet() {
           id: docId,
         });
         setLoader(false);
+        router.replace('/(tabs)/home')
       };
   return (
     <ScrollView style={{
