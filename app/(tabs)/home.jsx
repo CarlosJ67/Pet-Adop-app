@@ -34,10 +34,21 @@ export default function Home() {
             fontSize:18
           }}> Agregar nueva mascota  </Text>
         </Link>
+
+         {/** En React Native, el componente 'Link' es utilizado principalmente
+          * para manejar la navegacion dentro de la aplicacion qie usan la biblioteca
+          * como 'react-navigation o expo-router' o para abrir enlaces. 
+          */}
     </View>
   )
 }
-
+/**
+ * Estilos 'addNewPetContainer'
+ * 
+ * Define los estilos para un contenedor visual en React Native. Este contenedor
+ * esta diseñado para presentar una interfaz visualmente atrativa que permite 
+ * añadir una nueva mascota.
+ */
 const styles = StyleSheet.create({
   addNewPetContainer:{
     display:'flex',

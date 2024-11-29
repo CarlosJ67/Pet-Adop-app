@@ -28,7 +28,7 @@ export default function Inbox() {
   }
 
   
-  // Filtrar la lista de Otro usuario in one state
+  // Filtrar la lista de otro usuario en un estado.
   const MapOtherUserList=()=>{
     const list=[];
     userList.forEach((record)=>{

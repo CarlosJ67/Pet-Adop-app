@@ -6,6 +6,12 @@ import Colors from '../../constants/Colors';
 import { useRouter } from 'expo-router';
 
 export default function Profile() {
+  /**
+   * Configuracion de Menú 
+   * 
+   * Se crea un arreglo de las opciones disponibles en el menu de la aplicacion.
+   * Cada una de estas opciones te permite navegar entre diferentes seccions de la aplicacion.
+   */
   const Menu=[
   {
     id:1,
@@ -41,6 +47,11 @@ export default function Profile() {
   const {user}=useUser();
   const router=useRouter();
   const {signOut}=useAuth();
+   /**
+   * Manejo de la funcion 'OnPressMenu'
+   * 
+   * Esta funcion maneja la accion que se ejecuta al seleccionar un opcion del menu
+   */
   const onPressMenu=(menu)=>{
     if(menu=='logout')
     {
