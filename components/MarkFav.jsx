@@ -18,14 +18,14 @@ export default function MarkFav({pet, color='black'}) {
      setFavList(result?.favorites ? result?.favorites:[])
     }
 
-    // Funcion que genera cuando le da en me gusta a la publucacion y se marca en la card y en la base de datos
+    // Funcion que se genera cuando le da en me gusta a la publucacion y se marca en la card y en la base de datos
     const AddToFav=async()=> {
         const favResult=favList;
         favResult.push(pet?.id)
         await Shared.UpdateFav(user,favResult);
         GetFav();
     }
-    // Funcion para remover el me gusta de la publicacion y de se quita del el id de la base de datos
+    // Funcion para remover el me gusta de la publicacion y se quita el id de la base de datos
     const removeFromFav=async()=>{
         const favResult=favList.filter(item=>item!=pet.id)
         await Shared.UpdateFav(user,favResult);
