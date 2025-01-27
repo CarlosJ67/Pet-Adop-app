@@ -36,7 +36,7 @@ export default function Home() {
         </Link>
 
          {/** En React Native, el componente 'Link' es utilizado principalmente
-          * para manejar la navegacion dentro de la aplicacion qie usan la biblioteca
+          * para manejar la navegacion dentro de la aplicacion que usan la biblioteca
           * como 'react-navigation o expo-router' o para abrir enlaces. 
           */}
     </View>
